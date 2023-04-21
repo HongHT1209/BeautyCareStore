@@ -1,0 +1,40 @@
+﻿@model BeautyCare.PhanLoai
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>PhanLoai</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LoaiSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LoaiSP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KhaiQuat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KhaiQuat)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,39 @@
+﻿@model IEnumerable<BeautyCare.PhanLoai>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.LoaiSP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KhaiQuat)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.LoaiSP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KhaiQuat)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MaPhanLoai }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MaPhanLoai }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MaPhanLoai })
+        </td>
+    </tr>
+}
+
+</table>

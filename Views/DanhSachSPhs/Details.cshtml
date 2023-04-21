@@ -1,0 +1,74 @@
+﻿@model BeautyCare.DanhSachSPh
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DanhSachSPh</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenSP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DonGia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DonGia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KhoiLuong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KhoiLuong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoLuong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoLuong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GioiThieu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GioiThieu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DSThuongHieu.TenTh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DSThuongHieu.TenTh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhanLoai.LoaiSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhanLoai.LoaiSP)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaSP }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

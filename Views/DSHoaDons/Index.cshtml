@@ -1,0 +1,39 @@
+﻿@model IEnumerable<BeautyCare.DSHoaDon>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NgayLap)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DSKhachHang.TenKH)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgayLap)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DSKhachHang.TenKH)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MaHD }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MaHD }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MaHD })
+        </td>
+    </tr>
+}
+
+</table>
